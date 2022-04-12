@@ -12,7 +12,7 @@ const svg = d3.select('div#map').append("svg")
 
 // load and display the World
 const g = svg.append("g");
-d3.json("../data/world-lowres.geo.json").then((topology) => {
+d3.json("public/data/world-lowres.geo.json").then((topology) => {
     const features = topology.features
     projection = projection.fitSize([width, height], topology)
     path = d3.geoPath().projection(projection);
